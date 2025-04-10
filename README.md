@@ -1,2 +1,5 @@
 # Javascript-Fundamentals
 Self Learning Batch 2025 Program - Javascript Fundamentals
+
+Finished Tasks: 
+1) Interactive To-Do List Application
