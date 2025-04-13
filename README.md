@@ -11,3 +11,4 @@ Finished Tasks:
 5. Dynamic Quiz Application
 6. Drag and Drop List Reordering
 7. Real-time Chat Simulation
+8. Single-Page Application (SPA) with Hash-based Routing
