@@ -10,3 +10,4 @@ Finished Tasks:
 4. Weather App with API Integration
 5. Dynamic Quiz Application
 6. Drag and Drop List Reordering
+7. Real-time Chat Simulation
