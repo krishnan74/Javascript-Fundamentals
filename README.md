@@ -9,3 +9,4 @@ Finished Tasks:
 3. Image Gallery Lightbox
 4. Weather App with API Integration
 5. Dynamic Quiz Application
+6. Drag and Drop List Reordering
