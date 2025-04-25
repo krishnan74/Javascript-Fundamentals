@@ -50,7 +50,7 @@ body {
 }
 
 .message {
-  max-width: 70%;
+  max-width: 100%;
   padding: 10px 15px;
   border-radius: 18px;
   margin-bottom: 10px;
@@ -58,7 +58,7 @@ body {
 }
 
 .message.sent {
-  align-self: flex-end;
+  align-self: flex-start;
   background-color: #0084ff;
   color: white;
   border-radius: 18px 18px 0 18px;

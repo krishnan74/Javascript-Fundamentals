@@ -71,6 +71,10 @@ function calculateScore() {
 
 function showResults() {
   const finalScore = calculateScore();
+
+  prevButton.style.display = "none";
+  nextButton.style.display = "none";
+  submitButton.style.display = "none";
   scoreElement.textContent = `${finalScore} out of ${questions.length}`;
 
   // Feedback based on score
@@ -91,8 +95,10 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  currentQuestionIndex++;
-  showQuestion();
+  if (userAnswers[currentQuestionIndex] !== null) {
+    currentQuestionIndex++;
+    showQuestion();
+  }
 });
 
 submitButton.addEventListener("click", showResults);
@@ -102,6 +108,8 @@ restartButton.addEventListener("click", () => {
   score = 0;
   userAnswers = new Array(questions.length).fill(null);
   resultContainer.style.display = "none";
+  prevButton.style.display = "block";
+  nextButton.style.display = "block";
   showQuestion();
 });
 

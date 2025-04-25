@@ -15,22 +15,10 @@ const visibilitySpan = document.querySelector("#visibility");
 const cloudinessSpan = document.querySelector("#cloudiness");
 const pressureSpan = document.querySelector("#pressure");
 
-// Reset all weather data to default values
-const resetWeatherData = () => {
-  temperatureSpan.textContent = "--";
-  humiditySpan.textContent = "--";
-  weatherSpan.textContent = "--";
-  windSpeedSpan.textContent = "--";
-  visibilitySpan.textContent = "--";
-  cloudinessSpan.textContent = "--";
-  pressureSpan.textContent = "--";
-};
-
 searchButton.addEventListener("click", () => {
   const cityName = cityInput.value.trim();
   if (!cityName) {
     showError("Please enter a city name");
-    resetWeatherData();
     return;
   }
   getWeather(cityName);
@@ -56,7 +44,6 @@ const showWeatherDetails = () => {
 const getWeather = async (cityName) => {
   try {
     showLoading();
-    resetWeatherData();
 
     // Validate city name format
     if (!/^[a-zA-Z\s-]+$/.test(cityName)) {

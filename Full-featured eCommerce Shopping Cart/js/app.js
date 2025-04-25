@@ -211,11 +211,15 @@ document.addEventListener("DOMContentLoaded", () => {
     store.renderProducts();
   };
 
-  searchInput.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-      performSearch();
-    }
+  searchInput.addEventListener("input", () => {
+    performSearch();
   });
+
+  // searchInput.addEventListener("keyup", (e) => {
+  //   if (e.key === "Enter") {
+  //     performSearch();
+  //   }
+  // });
 
   searchBtn.addEventListener("click", performSearch);
 

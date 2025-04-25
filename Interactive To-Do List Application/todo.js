@@ -1,6 +1,6 @@
 // Grab references to the DOM elements we need
 const todoInput = document.getElementById("todoInput");
-const addTodoButton = document.getElementById("addTodo");
+// const addTodoButton = document.getElementById("addTodo");
 const todoList = document.getElementById("todoList");
 
 // This array will hold all our tasks, loaded from localStorage if available
@@ -9,6 +9,12 @@ let todos = JSON.parse(localStorage.getItem("todos")) || [];
 // Save the current list of tasks to localStorage
 const saveTodos = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+// Add todo from HTML
+const addTodoFromHTML = () => {
+  const text = todoInput.value;
+  addTodo(text);
 };
 
 // Create a new list item for a task
@@ -23,6 +29,8 @@ const createTodoElement = (todo) => {
   checkbox.addEventListener("change", () => toggleTodo(todo.id));
 
   const span = document.createElement("span");
+
+  span.addEventListener("click", () => toggleTodo(todo.id));
   span.textContent = todo.text;
 
   const deleteButton = document.createElement("button");
@@ -80,7 +88,7 @@ const deleteTodo = (id) => {
 };
 
 // Set up event listeners for adding tasks
-addTodoButton.addEventListener("click", () => addTodo(todoInput.value));
+// addTodoButton.addEventListener("click", () => addTodo(todoInput.value));
 
 todoInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
